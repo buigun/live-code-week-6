@@ -45,11 +45,11 @@ $('#btn-logout').click(function(e) {
 
 $('#addFood').submit(function(e){
     e.preventDefault();
-
-    const title = $('#foodTitle')
-    const price = $('#foodPrice')
-    const ingredients = $('#foodIngredients')
-    const tag = $('foodTag')
+    console.log('add food')
+    const title = $('#foodTitle').val()
+    const price = $('#foodPrice').val()
+    const ingredients = $('#foodIngredients').val()
+    const tag = $('foodTag').val()
 
     const food= {title,price,ingredients,tag}
 
@@ -111,7 +111,7 @@ function showAll() {
     })
 }
 
-$(this).click(function(e){
+$('#deleteFood').click(function(e){
     e.preventDefault();
 
     $.ajax({
