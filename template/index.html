@@ -13,7 +13,12 @@
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="https://use.typekit.net/nhw3aqu.css" />
-
+  
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  
   <style>
     * {
       font-family: 'proxima-nova';
@@ -59,23 +64,23 @@
 <body class="background">
 
   <!-- Login -->
-  <div class="container my-3">
+  <div class="container my-3" id="login">
     <div class="row">
       <div class="col-12 p-0 text-center">
         <img src="/assets/security.svg" alt="" style="height:40%;" />
         <h5 class="font-weight-light mb-3">You shall not pass, please verify your identity</h5>
         <div class="row">
           <div class="col-md-6 mx-auto">
-            <form>
+            <form id="form-login">
               <div class="form-group">
                 <label for="exampleInputEmail1" class="text-left">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp"
                   placeholder="Enter email" />
               </div>
 
               <div class="form-group">
                 <label for="exampleInputPassword">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="emailHelp"
+                <input type="password" class="form-control" id="passwordLogin" aria-describedby="emailHelp"
                   placeholder="Enter password" />
               </div>
 
@@ -88,7 +93,7 @@
   </div>
 
   <!-- Full App -->
-  <div class="container my-3">
+  <div class="container my-3" id="mainpage">
     <nav class="navbar navbar-light bg-light">
       <button class="btn btn-primary ml-auto">
         Logout
@@ -240,6 +245,7 @@
     </div>
   </div>
 
+  <script src="main.js"></script>
 </body>
 
 </html>
